@@ -18,4 +18,20 @@ El objetivo de este proyecto es hacer un juego tipo ascii art basado en el juego
 - El juego acaba cuando las piezas se amontonan hasta llegar a lo más alto (3x5 bloques en el área visible), interfiriendo la caída de más piezas.
 
 # Funcionamiento
-- 
+## Dibujo.hpp
+- Define la clase Dibujo, que representa un elemento gráfico que se puede dibujar en la pantalla.
+- La clase contiene métodos para dibujar el objeto en una pantalla, desplazarlo en el eje X y Y, establecer su posición, verificar colisiones con otro objeto Dibujo y verificar si alcanza el fondo de la pantalla.
+- También incluye un constructor predeterminado, un constructor con posición inicial, un constructor con contenido y posición inicial, y un destructor.
+## Archivo.hpp
+- Define la clase Archivo, que se encarga de leer un archivo de texto que contiene la información para crear un objeto Dibujo.
+- El archivo se abre y lee línea por línea, donde cada línea representa una fila del contenido del dibujo.
+- La clase proporciona un método para crear un objeto Dibujo a partir del contenido leído del archivo.
+## main.cpp
+- Contiene la función principal main donde se ejecuta la lógica principal del juego Tetris.
+- En el main, se crean instancias de la clase Archivo para cada pieza de Tetris disponible.
+- Luego, se crea una ventana de pantalla usando la biblioteca FTXUI y se inicia un bucle principal.
+- Dentro del bucle principal, se hace que cada pieza caiga una tras otra hasta que alcance el fondo de la pantalla.
+- Después de que una pieza llega al fondo, se reinicia el bucle y comienza a caer la siguiente pieza. Este proceso se repite indefinidamente.
+
+# Instruciones 
+- Una vez copiado todo el repositorio, escribir en la terminal "make run" para ver la animacion de las piezas caer
